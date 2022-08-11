@@ -1,19 +1,16 @@
 const express = require('express');
 const app = express();
-const bodyParser = require("body-parser");
+require('dotenv').config()
 
 
 // PORT is define
-const PORT = process.env.PORT || 1000
-
-
+const PORT = process.env.PORT || 3002
 
 // Parses the text as url encoded data
-app.use(bodyParser.urlencoded({extended: true}));  
-app.use(bodyParser.json());
+app.use(express.json());
 
 // Router import and use
-app.use('/api', require('./routes/BlogRoute'))
+app.use('/api', require('./routes/UserRoute'));
 
 
 // DB import and call
@@ -22,5 +19,5 @@ db.on("error", () => console.log("connection error:"));
 db.once("open", () => console.log("Database is connected"));
 
 app.listen(PORT, () => {
-    console.log("Server is running");
+    console.log("Server is running http://localhost:"+PORT);
 })
