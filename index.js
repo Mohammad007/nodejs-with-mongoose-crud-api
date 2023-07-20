@@ -11,7 +11,7 @@ app.use(express.json());
 
 // check api
 app.get('/', (req,res) => {
-    res.json({ status: 200, message: 'Server is working! test your api' }) 
+    res.json({ status: 200, message: 'Server is working! test your api' })
 })
 
 // Router import and use
