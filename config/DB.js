@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 // I am using mongodb cluster online 
 mongoose.connect(
-  "mongodb+srv://crud-api:Bilal@8477908696@cluster0.iztdw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "mongodb://127.0.0.1:27017/nodeapi",
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
