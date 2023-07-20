@@ -9,9 +9,13 @@ const PORT = process.env.PORT || 3002
 // Parses the text as url encoded data
 app.use(express.json());
 
+// check api
+app.get('/', (req,res) => {
+    res.json({ status: 200, message: 'API is working' })
+})
+
 // Router import and use
 app.use('/api', require('./routes/UserRoute'));
-
 
 // DB import and call
 const db = require('./config/DB')
