@@ -4,7 +4,7 @@ require('dotenv').config()
 
 
 // PORT is define
-const PORT = process.env.PORT || 3002
+const PORT = process.env.PORT || 3000
 
 // Parses the text as url encoded data
 app.use(express.json());
